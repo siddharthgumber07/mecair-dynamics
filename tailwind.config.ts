@@ -76,12 +76,37 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        "slide-from-left": {
+          from: { opacity: "0", transform: "translateX(-24px)", filter: "blur(4px)" },
+          to: { opacity: "1", transform: "translateX(0)", filter: "blur(0)" },
+        },
+        "slide-from-right": {
+          from: { opacity: "0", transform: "translateX(24px)", filter: "blur(4px)" },
+          to: { opacity: "1", transform: "translateX(0)", filter: "blur(0)" },
+        },
+        "draw-line": {
+          from: { width: "0%" },
+          to: { width: "100%" },
+        },
+        "counter-up": {
+          from: { opacity: "0", transform: "translateY(8px) scale(0.95)" },
+          to: { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        "slide-in-mobile": {
+          from: { opacity: "0", transform: "translateX(100%)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
+        "slide-from-left": "slide-from-left 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-from-right": "slide-from-right 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "draw-line": "draw-line 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "counter-up": "counter-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-in-mobile": "slide-in-mobile 0.3s ease-out forwards",
       },
     },
   },

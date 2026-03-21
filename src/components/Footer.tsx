@@ -1,4 +1,5 @@
 import { Linkedin, Instagram, Facebook } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const sections = [
   { title: "Company", links: ["About Us", "Our Team", "Contact"] },
@@ -21,8 +22,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8 py-14">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-md bg-accent flex items-center justify-center font-black text-accent-foreground text-base">M</div>
+            <div className="flex items-center gap-2.5 mb-4">
+              <img src={logo} alt="MechAir Dynamics" className="h-9 w-auto" />
               <span className="font-bold text-lg">MechAir Dynamics</span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed">
@@ -30,7 +31,11 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 mt-5">
               {[Linkedin, Instagram, Facebook].map((Icon, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-md bg-white/10 hover:bg-accent flex items-center justify-center transition-colors">
+                <a
+                  key={i}
+                  href="#"
+                  className="w-9 h-9 rounded-md bg-white/10 hover:bg-accent hover:-translate-y-0.5 flex items-center justify-center transition-all duration-200"
+                >
                   <Icon size={16} />
                 </a>
               ))}

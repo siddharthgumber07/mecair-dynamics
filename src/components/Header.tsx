@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -29,15 +30,13 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-lg"
+          ? "bg-primary/95 backdrop-blur-md shadow-lg border-b-2 border-accent/60"
           : "bg-primary"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
-        <button onClick={() => handleClick("#home")} className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-md bg-accent flex items-center justify-center font-black text-accent-foreground text-lg tracking-tight">
-            M
-          </div>
+        <button onClick={() => handleClick("#home")} className="flex items-center gap-2.5 group">
+          <img src={logo} alt="MechAir Dynamics" className="h-10 w-auto" />
           <span className="text-primary-foreground font-bold text-lg tracking-tight">
             MechAir <span className="font-medium opacity-80">Dynamics</span>
           </span>
@@ -71,7 +70,7 @@ const Header = () => {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-primary border-t border-white/10 animate-fade-in">
+        <div className="lg:hidden bg-primary border-t border-white/10 animate-slide-in-mobile">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <button

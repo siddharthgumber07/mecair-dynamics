@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-const useScrollReveal = () => {
+type Direction = "up" | "left" | "right";
+
+const useScrollReveal = (direction: Direction = "up") => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -15,7 +17,15 @@ const useScrollReveal = () => {
     return () => observer.disconnect();
   }, []);
 
-  return { ref, visible };
+  const animClass = visible
+    ? direction === "left"
+      ? "animate-slide-from-left"
+      : direction === "right"
+        ? "animate-slide-from-right"
+        : "animate-fade-up"
+    : "opacity-0";
+
+  return { ref, visible, animClass };
 };
 
 export default useScrollReveal;

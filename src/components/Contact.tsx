@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { Mail, Phone, Send } from "lucide-react";
+import { Mail, Phone, Send, MapPin } from "lucide-react";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { toast } from "sonner";
 
@@ -18,58 +18,67 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28">
+    <section id="contact" className="py-24 lg:py-32">
       <div ref={ref} className="container mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-accent font-semibold text-sm tracking-wide uppercase">Contact Us</span>
-          <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-foreground tracking-tight text-balance">
-            Let's Get in Touch
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            Ready to optimize your compressed air system? Reach out and our team will respond within hours.
-          </p>
-        </div>
-
         <div className={`grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto ${visible ? "animate-fade-up" : "opacity-0"}`}>
-          <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center shrink-0">
-                <Mail className="text-accent" size={20} />
+          {/* Dark info panel */}
+          <div className="lg:col-span-2 bg-primary text-primary-foreground rounded-lg p-8 shadow-lg">
+            <h2 className="text-2xl font-bold tracking-tight mb-2">Let's Get in Touch</h2>
+            <p className="text-primary-foreground/60 text-sm mb-8">
+              Ready to optimize your compressed air system? Our team responds within hours.
+            </p>
+
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                  <Mail className="text-accent" size={18} />
+                </div>
+                <div>
+                  <h4 className="font-medium text-sm text-primary-foreground/80">Email</h4>
+                  <a href="mailto:mechairdynamics@gmail.com" className="text-primary-foreground text-sm hover:text-accent transition-colors">
+                    mechairdynamics@gmail.com
+                  </a>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-foreground">Email</h4>
-                <a href="mailto:mechairdynamics@gmail.com" className="text-muted-foreground text-sm hover:text-accent transition-colors">
-                  mechairdynamics@gmail.com
-                </a>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                  <Phone className="text-accent" size={18} />
+                </div>
+                <div>
+                  <h4 className="font-medium text-sm text-primary-foreground/80">Ashish Kumar — Service</h4>
+                  <a href="tel:+919999999999" className="text-primary-foreground text-sm hover:text-accent transition-colors">
+                    +91 99999 99999
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center shrink-0">
-                <Phone className="text-accent" size={20} />
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                  <Phone className="text-accent" size={18} />
+                </div>
+                <div>
+                  <h4 className="font-medium text-sm text-primary-foreground/80">Ankit Kalshania — Sales</h4>
+                  <a href="tel:+919999999998" className="text-primary-foreground text-sm hover:text-accent transition-colors">
+                    +91 99999 99998
+                  </a>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-foreground">Ashish Kumar</h4>
-                <p className="text-muted-foreground text-sm">Service Head</p>
-                <a href="tel:+919999999999" className="text-muted-foreground text-sm hover:text-accent transition-colors">
-                  +91 99999 99999
-                </a>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center shrink-0">
-                <Phone className="text-accent" size={20} />
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground">Ankit Kalshania</h4>
-                <p className="text-muted-foreground text-sm">Sales Head</p>
-                <a href="tel:+919999999998" className="text-muted-foreground text-sm hover:text-accent transition-colors">
-                  +91 99999 99998
-                </a>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                  <MapPin className="text-accent" size={18} />
+                </div>
+                <div>
+                  <h4 className="font-medium text-sm text-primary-foreground/80">Location</h4>
+                  <p className="text-primary-foreground/70 text-sm">New Delhi, India</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="lg:col-span-3 bg-card rounded-lg p-6 shadow-sm border border-border/50 space-y-4">
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="lg:col-span-3 bg-card rounded-lg p-7 shadow-sm border border-border/50 space-y-5">
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">Name</label>
