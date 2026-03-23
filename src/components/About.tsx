@@ -46,7 +46,7 @@ const About = () => {
             </h2>
             <div className="mt-1 h-1 w-16 bg-accent rounded-full animate-draw-line" />
             <p className="mt-7 text-muted-foreground leading-relaxed text-[15px]">
-              At MechAir Dynamics, we don't just sell air compressors—we provide the lifeblood of your industrial operations. Led by Ashish Kumar (Service Head) and Ankit Kalshania (Sales Head), our mission is to deliver high-performance compressed air solutions that minimize downtime and maximize efficiency.
+              At MechAir Dynamics, we don't just sell air compressors—we provide the lifeblood of your industrial operations. Led by Ashish Kumar (Director) and Ankit Kalshania (Director), our mission is to deliver high-performance compressed air solutions that minimize downtime and maximize efficiency.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed text-[15px]">
               With a dedicated team of engineers and a 24/7 service commitment, we have built a reputation for excellence in Screw and Reciprocating Compressors, Air Treatment, and comprehensive maintenance. From providing the highest quality materials to offering flexible rental units, we ensure your business never stops moving.

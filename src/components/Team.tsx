@@ -1,8 +1,8 @@
 import useScrollReveal from "@/hooks/useScrollReveal";
 
 const leadership = [
-  { name: "Ashish Kumar", role: "Service Head", initials: "AK", desc: "Leads our 24/7 service operations with 10+ years of compressor expertise." },
-  { name: "Ankit Kalshania", role: "Sales Head", initials: "AK", desc: "Drives client partnerships and ensures optimal compressed air solutions." },
+  { name: "Ashish Kumar", role: "Director", initials: "AK", desc: "Leads our 24/7 service operations with 10+ years of compressor expertise." },
+  { name: "Ankit Kalshania", role: "Director", initials: "AK", desc: "Drives client partnerships and ensures optimal compressed air solutions." },
 ];
 
 const team = [
