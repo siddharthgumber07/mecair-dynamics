@@ -34,10 +34,7 @@ export const Clients = () => {
     <section className="py-24 bg-white dark:bg-gray-950 overflow-hidden">
       <div className="container mx-auto px-4 mb-16">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-3">
-            Industry Leaders
-          </h2>
-          <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-primary mb-6 leading-tight">
             Brands that trust our expertise
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-400">
