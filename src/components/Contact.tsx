@@ -47,8 +47,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-sm text-primary-foreground/80">Ashish Kumar — Director</h4>
-                  <a href="tel:+919999999999" className="text-primary-foreground text-sm hover:text-accent transition-colors">
-                    +91 99999 99999
+                  <a href="tel:+917060535279" className="text-primary-foreground text-sm hover:text-accent transition-colors">
+                    +91 7060535279
                   </a>
                 </div>
               </div>
@@ -59,8 +59,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-sm text-primary-foreground/80">Ankit Kalshania — Director</h4>
-                  <a href="tel:+919999999998" className="text-primary-foreground text-sm hover:text-accent transition-colors">
-                    +91 99999 99998
+                  <a href="tel:+919761666747" className="text-primary-foreground text-sm hover:text-accent transition-colors">
+                    +91 9761666747
                   </a>
                 </div>
               </div>

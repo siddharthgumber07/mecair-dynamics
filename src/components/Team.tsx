@@ -8,7 +8,7 @@ const leadership = [
 const team = [
   { name: "Rajat Kumar", role: "Service Engineer", initials: "RK" },
   { name: "Viraj Singh", role: "Service Engineer", initials: "VS" },
-  { name: "Ankita Aggarwal", role: "Operations", initials: "AA" },
+  { name: "Shalini Baraswal", role: "Operations", initials: "SB" },
 ];
 
 const Team = () => {
