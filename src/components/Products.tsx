@@ -18,7 +18,7 @@ const products = [
 ];
 
 const spareParts = [
-  "Air Filters", "Oil Separators", "Controllers", "Intake Valves",
+  "Air Filters", "Oil Filters", "Oil Kits", "Oil Separators", "Controllers", "Intake Valves",
   "Motor Bearings", "Solenoid Valves", "Pressure Sensors", "Lubricants",
 ];
 

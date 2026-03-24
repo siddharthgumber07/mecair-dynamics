@@ -5,6 +5,7 @@ import itcLogo from "@/assets/clients/itc-limited-logo-black-and-white.png";
 import mahindraLogo from "@/assets/clients/mahindra_logo.png";
 import panasonicLogo from "@/assets/clients/panasonic.png";
 import sgsLogo from "@/assets/clients/sgs_pharma.png";
+import csLogo from "@/assets/clients/CS-LOGO.png";
 
 type Client = {
   name: string;
@@ -18,7 +19,7 @@ const clients: Client[] = [
   { name: "SR Fastner" },
   { name: "Mahindra & Mahindra", logo: mahindraLogo },
   { name: "ITC Limited", logo: itcLogo },
-  { name: "C&S Pvt ltd" },
+  { name: "C&S Pvt ltd" , logo: csLogo},
   { name: "Panasonic", logo: panasonicLogo },
   { name: "Natural Herbs Pvt Ltd" },
   { name: "Apis India Pvt Ltd" },

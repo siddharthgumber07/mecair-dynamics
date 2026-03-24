@@ -59,7 +59,7 @@ const About = () => {
               {[
                 { num: "500", suffix: "+", label: "Successful Installations" },
                 { num: "24/7", suffix: "", label: "Emergency Support" },
-                { num: "15", suffix: "+", label: "Years Combined Experience" },
+                { num: "10", suffix: "+", label: "Years Combined Experience" },
                 { num: "98", suffix: "%", label: "Client Retention Rate" },
               ].map((s) => (
                 <div key={s.label} className="py-5 first:pt-0 last:pb-0 flex items-baseline justify-between">

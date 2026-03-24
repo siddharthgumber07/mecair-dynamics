@@ -1,8 +1,10 @@
 import useScrollReveal from "@/hooks/useScrollReveal";
+import aashishImg from "@/assets/profile/aashish.jpeg";
+import ankitImg from "@/assets/profile/ankit.jpeg";
 
 const leadership = [
-  { name: "Ashish Kumar", role: "Director", initials: "AK", desc: "Leads our 24/7 service operations with 10+ years of compressor expertise." },
-  { name: "Ankit Kalshania", role: "Director", initials: "AK", desc: "Drives client partnerships and ensures optimal compressed air solutions." },
+  { name: "Ashish Kumar", role: "Director", initials: "AK", image: aashishImg, desc: "Leads our 24/7 service operations with 10+ years of compressor expertise." },
+  { name: "Ankit Kalshania", role: "Director", initials: "AK", image: ankitImg, desc: "Drives client partnerships and ensures optimal compressed air solutions." },
 ];
 
 const team = [
@@ -34,14 +36,20 @@ const Team = () => {
               }`}
               style={{ animationDelay: `${i * 120}ms` }}
             >
-              <div className="flex items-stretch">
-                <div className={`w-24 shrink-0 flex items-center justify-center ${i === 0 ? "bg-primary" : "bg-accent"}`}>
-                  <span className="text-white font-bold text-2xl">{p.initials}</span>
+              <div className="flex flex-row items-stretch h-full">
+                <div className={`w-[35%] sm:w-40 shrink-0 overflow-hidden ${i === 0 ? "bg-primary" : "bg-accent"}`}>
+                  {p.image ? (
+                    <img src={p.image} alt={p.name} className="w-full h-full object-cover object-top min-h-[160px]" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center min-h-[160px]">
+                      <span className="text-white font-bold text-3xl">{p.initials}</span>
+                    </div>
+                  )}
                 </div>
-                <div className="p-6">
-                  <h4 className="font-semibold text-foreground text-lg">{p.name}</h4>
-                  <p className="text-accent text-sm font-medium mt-0.5">{p.role}</p>
-                  <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{p.desc}</p>
+                <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
+                  <h4 className="font-semibold text-foreground text-lg sm:text-xl">{p.name}</h4>
+                  <p className="text-secondary-foreground text-xs sm:text-sm font-medium mt-1">{p.role}</p>
+                  <p className="text-muted-foreground text-sm mt-2 sm:mt-3 leading-relaxed">{p.desc}</p>
                 </div>
               </div>
             </div>
