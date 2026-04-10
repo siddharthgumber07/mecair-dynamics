@@ -60,7 +60,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-primary-foreground/40 text-sm">
           <p>© {new Date().getFullYear()} MechAir Dynamics. All rights reserved.</p>
-          <p>New Delhi, India</p>
+          <p>Village Matlabpur, Roorkee, Haridwar, Uttrakhand</p>
         </div>
       </div>
     </footer>
