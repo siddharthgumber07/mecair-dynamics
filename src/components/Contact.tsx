@@ -71,7 +71,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-sm text-primary-foreground/80">Location</h4>
-                  <p className="text-primary-foreground/70 text-sm">New Delhi, India</p>
+                  <p className="text-primary-foreground/70 text-sm">Village Matlabpur, Roorkee, Haridwar, Uttrakhand</p>
                 </div>
               </div>
             </div>
