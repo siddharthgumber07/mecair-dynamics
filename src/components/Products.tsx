@@ -1,6 +1,13 @@
 import { useState } from "react";
-import { Cog, Wind, PipetteIcon, Filter, Container, Settings, ChevronRight } from "lucide-react";
+import { Cog, Wind, PipetteIcon, Filter, Container, Settings, ChevronRight, Handshake } from "lucide-react";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import spare1 from "@/assets/spare/spare1.jpg";
+import spare2 from "@/assets/spare/spare2.jpeg";
+import spare3 from "@/assets/spare/spare3.jpeg";
+import fsCurtisLogo from "@/assets/clients/fs-curtis.png";
+import nx160Img from "@/assets/supplier/nx-he-160.png";
+import nx75Img from "@/assets/supplier/nx-75-90-rev-601x601.png";
+import es04Img from "@/assets/supplier/gw04-v5.jpg";
 
 const categories = [
   { key: "compressors", label: "Compressors" },
@@ -20,6 +27,18 @@ const products = [
 const spareParts = [
   "Air Filters", "Oil Filters", "Oil Kits", "Oil Separators", "Controllers", "Intake Valves",
   "Motor Bearings", "Solenoid Valves", "Pressure Sensors", "Lubricants",
+];
+
+const sparePartImages = [
+  { src: spare1, alt: "FS-Curtis genuine air and oil filters, separators, and service components", caption: "Genuine FS-Curtis spares" },
+  { src: spare2, alt: "Compressor spare parts including fans, controllers, filters, and maintenance kits", caption: "Full spare parts range" },
+  { src: spare3, alt: "Industrial compressor spare parts catalog — filters, valves, belts, and air ends", caption: "Stocked for fast delivery" },
+];
+
+const fsCurtisProducts = [
+  { src: nx160Img, name: "NX160 High Efficiency", desc: "Large-capacity rotary screw compressor for continuous industrial demand." },
+  { src: nx75Img, name: "NX75", desc: "Mid-range rotary screw compressor with advanced controls and high efficiency." },
+  { src: es04Img, name: "ECOSCROLL ES04", desc: "Oil-free scroll compressor for clean, reliable compressed air." },
 ];
 
 const Products = () => {
@@ -90,6 +109,61 @@ const Products = () => {
                   <span key={part} className="px-3 py-1.5 bg-secondary text-foreground text-sm rounded-full font-medium border border-border/50 hover:border-accent/40 transition-colors cursor-default">
                     {part}
                   </span>
+                ))}
+              </div>
+              <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {sparePartImages.map((img) => (
+                  <figure key={img.caption} className="overflow-hidden rounded-lg border border-border/50 bg-secondary/50">
+                    <img src={img.src} alt={img.alt} className="w-full h-40 sm:h-36 object-cover object-center" loading="lazy" />
+                    <figcaption className="px-3 py-2 text-xs font-medium text-muted-foreground text-center">{img.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FS-Curtis supplier */}
+        <div className={`mt-16 lg:mt-20 ${visible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "300ms" }}>
+          <div className="bg-card rounded-lg p-6 lg:p-8 border border-border/50 shadow-sm">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+              <div className="lg:w-1/3 shrink-0">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Handshake className="text-primary" size={22} />
+                  </div>
+                  <h3 className="font-bold text-foreground text-xl">Our Supplier — FS-Curtis</h3>
+                </div>
+                <img src={fsCurtisLogo} alt="FS-Curtis logo" className="h-14 w-auto object-contain mb-5" />
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  MechAir Dynamics partners with <strong className="text-foreground font-medium">FS-Curtis</strong> to supply rotary screw and oil-free scroll compressors backed by genuine spare parts — air/oil separators, filters, controllers, valves, and complete maintenance kits.
+                </p>
+                <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
+                  We stock and source OEM parts for fast turnaround, keeping your compressed air system running with minimal downtime.
+                </p>
+                <a
+                  href="https://www.fscurtis.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 text-sm font-medium text-accent hover:underline"
+                >
+                  Visit fscurtis.com →
+                </a>
+              </div>
+              <div className="lg:flex-1 grid sm:grid-cols-3 gap-4">
+                {fsCurtisProducts.map((product) => (
+                  <figure
+                    key={product.name}
+                    className="rounded-lg border border-border/50 overflow-hidden bg-secondary/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    <div className="aspect-square bg-white flex items-center justify-center p-3">
+                      <img src={product.src} alt={product.name} className="max-h-full max-w-full object-contain" loading="lazy" />
+                    </div>
+                    <figcaption className="p-3 border-t border-border/50">
+                      <h4 className="font-semibold text-foreground text-sm">{product.name}</h4>
+                      <p className="mt-1 text-muted-foreground text-xs leading-relaxed">{product.desc}</p>
+                    </figcaption>
+                  </figure>
                 ))}
               </div>
             </div>
