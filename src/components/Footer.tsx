@@ -58,9 +58,12 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-primary-foreground/40 text-sm">
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-primary-foreground/40 text-sm">
           <p>© {new Date().getFullYear()} MechAir Dynamics. All rights reserved.</p>
-          <p>T-7 204 Haridwar Greens Roshnabad Near Vandna Katariya Stadium</p>
+          <div className="flex flex-col sm:flex-row gap-x-8 gap-y-2 text-xs">
+            <p><span className="font-semibold text-primary-foreground/70">Head Office:</span> Raj Vihar Colony, Dhandhera, Haridwar - 247666</p>
+            <p><span className="font-semibold text-primary-foreground/70">Branch Office:</span> T-7 204, Haridwar Greens, Roshnabad, Haridwar</p>
+          </div>
         </div>
       </div>
     </footer>

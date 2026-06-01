@@ -46,7 +46,7 @@ const Contact = () => {
                   <Phone className="text-accent" size={18} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-sm text-primary-foreground/80">Ashish Kumar — Director</h4>
+                  <h4 className="font-medium text-sm text-primary-foreground/80">Ashish Kumar — Manager</h4>
                   <a href="tel:+917060535279" className="text-primary-foreground text-sm hover:text-accent transition-colors">
                     +91 7060535279
                   </a>
@@ -58,7 +58,7 @@ const Contact = () => {
                   <Phone className="text-accent" size={18} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-sm text-primary-foreground/80">Ankit Kalshania — Director</h4>
+                  <h4 className="font-medium text-sm text-primary-foreground/80">Ankit Kalshania — Management & Marketing</h4>
                   <a href="tel:+919761666747" className="text-primary-foreground text-sm hover:text-accent transition-colors">
                     +91 9761666747
                   </a>
@@ -69,9 +69,19 @@ const Contact = () => {
                 <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                   <MapPin className="text-accent" size={18} />
                 </div>
-                <div>
-                  <h4 className="font-medium text-sm text-primary-foreground/80">Location</h4>
-                  <p className="text-primary-foreground/70 text-sm">T-7 204 Haridwar Greens Roshnabad Near Vandna Katariya Stadium</p>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-accent">Head Office</h4>
+                    <p className="text-primary-foreground text-sm mt-0.5">
+                      Raj Vihar Colony, Dhandhera, Haridwar, Uttarakhand - 247666
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-accent">Branch Office</h4>
+                    <p className="text-primary-foreground text-sm mt-0.5">
+                      T-7 204, Haridwar Greens, Roshnabad, Near Vandna Katariya Stadium, Haridwar, Uttarakhand
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
